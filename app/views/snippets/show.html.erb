@@ -1,0 +1,8 @@
+<h1>Snippet Show Case</h1>
+
+<%= @snippet.kind.language %>
+<%= @snippet.title %>
+<%= markdown(@snippet.work) %>
+<hr>
+<%= link_to "Edit", edit_snippet_path(@snippet) %>
+<%= link_to "Delete", snippet_path(@snippet), method: :delete %>

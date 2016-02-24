@@ -1,0 +1,7 @@
+<ul class="list-group">
+  <% @kinds.each do |f| %>
+    <li class="list-group-item">
+     <span class="badge"> <%= @snippets.where("kind_id = ?", f).count %>  </span>
+      <%= link_to f.language, kind_path(f) %>
+  <% end %>
+</ul>

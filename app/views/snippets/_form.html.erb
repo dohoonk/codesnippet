@@ -1,0 +1,14 @@
+<%= form_for @snippet do |f| %>
+<div>
+<%= f.collection_select(:kind_id, Kind.all, :id, :language) %>
+</div>
+<div>
+<%= f.label :title %>
+<%= f.text_field :title %>
+</div>
+<div>
+<%= f.label :work %>
+<%= f.text_area :work %>
+</div>
+<%= f.submit %>
+<% end %>
